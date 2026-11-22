@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#121212" />
+  <title>แอปทดลองของฉัน</title>
+  <style>
+    * { box-sizing: border-box; font-family: sans-serif; }
+    body {
+      margin: 0; padding: 24px;
+      background: #121212; color: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; text-align: center;
+    }
+    .card {
+      background: #1e1e2e; padding: 24px; border-radius: 16px;
+      width: 100%; max-width: 360px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    button {
+      width: 100%; padding: 14px; margin-top: 16px;
+      font-size: 16px; font-weight: bold; color: #fff;
+      background: #6366f1; border: none; border-radius: 10px;
+    }
+    button:active { transform: scale(0.98); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>แอปทดลองของฉัน</h2>
+    <p id="status">กดปุ่มด้านล่างเพื่อทดสอบ</p>
+    <button onclick="tapTest()">กดทดสอบ</button>
+  </div>
+
+  <script>
+    let count = 0;
+    function tapTest() {
+      count++;
+      document.getElementById("status").innerText = "กดไปแล้ว " + count + " ครั้ง!";
+    }
+  </script>
+</body>
+</html>
